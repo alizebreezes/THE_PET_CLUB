@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Pet.create(name: "fido", species: "dog", age: 15, description: "bites")
-User.create(name: "martin", location: "stockholm", bio: "bla bla", email: "nordlund.martin@gmail.com")
-Booking.create()
+User.create(name: "martin", location: "stockholm", bio: "bla bla", email: "nordlund.martin@gmail.com", password: "123456")
+User.create(name: "j", location: "copenhagen", bio: "bla bla bla", email: "jjj@jjj.com", password: "123456")
+Pet.create(name: "fido", species: "dog", age: 15, description: "bites", user: martin)
+Pet.create(name: "brutus", species: "cat", age: 5, description: "meows", user: j)
+
