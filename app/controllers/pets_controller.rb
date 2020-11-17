@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
   def index
+    @pets = Pet.all
   end
 
   def show
@@ -10,7 +11,6 @@ class PetsController < ApplicationController
   end
 
   def create
-
   @pet = Pet.new(pet_params)
   @pet.user = current_user
     if @pet.save
@@ -18,9 +18,6 @@ class PetsController < ApplicationController
   else
     render :new
   end
-
-
-
 
   end
 
