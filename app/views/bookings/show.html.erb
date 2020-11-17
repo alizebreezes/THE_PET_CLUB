@@ -1,6 +1,5 @@
 <h1>Your booking</h1>
-<% raise %>
 <%= @booking.start_date %>
 <%= @booking.end_date %>
-<%= @booking.user_id %>
-<%= @booking.pet_id %>
+<%= @booking.user.name %>
+<%= @booking.pet.name %>
