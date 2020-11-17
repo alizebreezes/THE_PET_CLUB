@@ -39,3 +39,17 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-orange {
+   color: orange;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-orange:hover {
+  opacity: 1;
+}
