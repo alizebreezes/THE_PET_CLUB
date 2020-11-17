@@ -14,13 +14,13 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @pet = Pet.find(params[:pet_id])
+    @booking.user = User.last
     @booking.pet = @pet
 
-    if @booking.save
-      redirect_to pet_path(@booking)
+    if @booking.save!
+      redirect_to pet_booking_path(pet_id: @pet, id: @booking)
     else
-      @booking.save
-      render pet_booking_path
+      render "new"
     end
   end
 
