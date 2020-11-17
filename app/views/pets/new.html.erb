@@ -1,2 +1,17 @@
-<h1>Pets#new</h1>
-<p>Find me in app/views/pets/new.html.erb</p>
+<div class="container">
+
+  <div class="text-center">
+    <h1>Add your Pet</h1>
+    <p>Find me in app/views/pets/new.html.erb</p>
+  </div>
+
+  <div>
+    <%= simple_form_for @pet do |f| %>
+          <%= f.input :name %>
+          <%= f.input :species %>
+          <%= f.input :age%>
+          <%= f.input :description %>
+          <%=f.button :submit, "Upload Pet", class: "btn-flat"%>
+    <% end %>
+  </div>
+</div>
