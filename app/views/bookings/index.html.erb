@@ -4,14 +4,13 @@
   <div class="text-center">
     <h1>Your bookings</h1>
   </div>
-
   <div>
     <%= @bookings.each do |b| %>
       <ol>
         <li> <%= b.id %> </li>
         <li> <%= b.pet.name %> </li>
-        <li> <%= b.start_date %> </li>
-        <li> <%= b.end_date %> </li>
+        <li> <%= b.start_date.strftime("%H:%M") %> </li>
+        <li> <%= b.end_date.strftime("%H:%M") %> </li>
       </ol>
     <% end %>
   </div>

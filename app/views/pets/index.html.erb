@@ -1,6 +1,6 @@
-<div class="banner-index" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'dog-running.jpg' %>');">
+<div class="banner-index" style="background-image: url('<%= image_path 'dog-running.jpg' %>');">
   <div class="banner-content">
-    <h1>Walk me [Pets Index Page]</h1>
+    <h1>Walk me</h1>
     <p>Take us out for a walk if you miss having an animal of your own or find someone to walk your pet.</p>
     <%= link_to "Add a pet", new_pet_path, class: "btn btn-flat btn-lg" %>
   </div>
@@ -9,15 +9,16 @@
   <div class="cards">
     <% @pets.each do |pet| %>
         <div class="card-trip">
-          <img src="https://source.unsplash.com/500x400/?dog" />
           <div class="card-trip-infos">
             <div>
               <h2><%= pet.name %></h2>
               <p><%= pet.species %></p>
               <p><%= pet.description %></p>
+              <%= cl_image_tag pet.photo.key %>
+
             </div>
-            <img src="https://source.unsplash.com/400x400/?portrait" class="card-trip-user avatar-bordered" />
           </div>
+            <%= link_to "", pet_path(pet), class: 'card-link' %>
         </div>
     <% end %>
   </div>
