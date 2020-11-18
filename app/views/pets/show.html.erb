@@ -4,38 +4,7 @@
   <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-primary' %>
   <br>
   <br>
-  <ul class="gallery_box">
-    <li>
-      <a href="#0"><img src="https://source.unsplash.com/featured/?dogs">
-      <div class="box_data">
-      </div></a>
-    </li>
-    <li>
-      <a href="#0"><img src="https://source.unsplash.com/featured/?dog">
-      <div class="box_data">
-      </div></a>
-    </li>
-      <li>
-      <a href="#0"><img src="https://source.unsplash.com/featured/?dogs">
-      <div class="box_data">
-      </div></a>
-    </li>
-    <li>
-      <a href="#0"><img src="https://source.unsplash.com/featured/?puppies">
-      <div class="box_data">
-      </div></a>
-    </li>
-    <li style="position: relative; top: -134px;">
-      <a href="#0"><img src="https://source.unsplash.com/featured/?puppy">
-      <div class="box_data">
-      </div></a>
-    </li>
-    <li>
-      <a href="#0"><img src="https://source.unsplash.com/featured/?dog">
-      <div class="box_data">
-      </div></a>
-    </li>
-  </ul>
+  <div> <%= cl_image_tag @pet.photo.key, crop: :fill %> </div>
 
   <div class="card-product">
   <img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
