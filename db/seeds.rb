@@ -11,4 +11,6 @@ User.create!(name: "martin", location: "stockholm", bio: "bla bla", email: "nord
 User.create!(name: "j", location: "copenhagen", bio: "bla bla bla", email: "jjj@jjj.com", password: "123456")
 Pet.create(name: "fido", species: "dog", age: 15, description: "bites", user: martin)
 Pet.create(name: "brutus", species: "cat", age: 5, description: "meows", user: j)
+Booking.create(start_date: "2020, 11, 9", end_date: "2020, 12, 04", user: martin, pet: fido)
+Booking.create(start_date: "2020, 12, 15", end_date: "2020, 12, 19", user: j, pet: brutus)
 

@@ -1,2 +1,18 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="container">
+  <h1>Booking details</h1>
+  <br>
+  <br>
+  <h3>Your booking with <em><%= @booking.pet.name.upcase %></em></h3>
+  <br>
+  <div class="card-product">
+  <div class="card-product-infos">
+      <p><strong>Time: </strong>from <em><%= @booking.start_date %></em> to <em><%= @booking.end_date %></em></p>
+      <p>Owner info: <em><%= link_to @booking.user.name, '#' %></em></p>
+  </div>
+  </div>
+  <br>
+  <br>
+  <%= link_to 'Back to my booking list', pet_bookings_path, class: 'btn btn-primary' %>
+  <br>
+  <br>
+</div>
