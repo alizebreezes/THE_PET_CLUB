@@ -1,14 +1,16 @@
 .footer {
-  background: $green;
+  background: $yellow;
   display: flex;
   margin-top: auto;
-  // align-items: center;
-  // justify-content: center;
   text-align: center;
-  flex-shrick: 0;
-  height: 120px;
+  min-height: 120px;
   padding: 16px 50px;
-  color: $light-gray;
+  color: #FDFFFC;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .footer-links {
@@ -31,5 +33,6 @@
 
 .footer-copyright {
   margin-top: 8px;
-  opacity: 0.9;
+  // opacity: 0.9;
+  color: $light-gray;
 }
