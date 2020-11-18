@@ -9,8 +9,8 @@
       <ol>
         <li> <%= b.id %> </li>
         <li> <%= b.pet.name %> </li>
-        <li> <%= b.start_date %> </li>
-        <li> <%= b.end_date %> </li>
+        <li> <%= b.start_date.strftime("%H:%M") %> </li>
+        <li> <%= b.end_date.strftime("%H:%M") %> </li>
       </ol>
     <% end %>
   </div>
