@@ -1,2 +1,53 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<div class="container">
+  <h2>Hello, I am <em><%= @pet.name.upcase %></em></h2>
+  <p>Owner: <em><strong><%= @pet.user.name %></strong></em>, live in <em><strong><%= @pet.user.location %></strong></em></p>
+  <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-primary' %>
+  <br>
+  <br>
+  <ul class="gallery_box">
+    <li>
+      <a href="#0"><img src="https://source.unsplash.com/featured/?dogs">
+      <div class="box_data">
+      </div></a>
+    </li>
+    <li>
+      <a href="#0"><img src="https://source.unsplash.com/featured/?dog">
+      <div class="box_data">
+      </div></a>
+    </li>
+      <li>
+      <a href="#0"><img src="https://source.unsplash.com/featured/?dogs">
+      <div class="box_data">
+      </div></a>
+    </li>
+    <li>
+      <a href="#0"><img src="https://source.unsplash.com/featured/?puppies">
+      <div class="box_data">
+      </div></a>
+    </li>
+    <li style="position: relative; top: -134px;">
+      <a href="#0"><img src="https://source.unsplash.com/featured/?puppy">
+      <div class="box_data">
+      </div></a>
+    </li>
+    <li>
+      <a href="#0"><img src="https://source.unsplash.com/featured/?dog">
+      <div class="box_data">
+      </div></a>
+    </li>
+  </ul>
+
+  <div class="card-product">
+  <img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
+  <div class="card-product-infos">
+    <i class="fas fa-quote-left"></i> <%= @pet.description %>
+      <p><em>species:</em> <%= @pet.species %>, <em>Age:</em> <%= @pet.age %></p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <%= link_to 'Back to the list', pets_path(@pet), class: 'btn btn-primary' %>
+  <br>
+  <br>
+
+</div>
