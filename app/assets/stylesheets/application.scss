@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0px auto;
+    background-color: white;
+}
+
+.container {
+    flex: 1;    /* same as flex-grow: 1; */
+    margin: 24px auto
+}
