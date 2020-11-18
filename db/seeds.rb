@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Booking.destroy_all
 Pet.destroy_all
 User.destroy_all
+
 
 martin = User.create!(name: "martin", location: "stockholm", bio: "bla bla", email: "martin@m.com", password: "123456")
 j = User.create!(name: "j", location: "copenhagen", bio: "bla bla bla", email: "j@jensray.com", password: "123456")
@@ -76,6 +76,5 @@ Booking.create(start_date: "2020, 11, 19", end_date: "2020, 11, 19", user: antje
 Booking.create(start_date: "2020, 12, 15", end_date: "2020, 12, 19", user: alize, pet: zorro)
 Booking.create(start_date: "2020, 11, 9", end_date: "2020, 12, 04", user: martin, pet: fido)
 Booking.create(start_date: "2020, 12, 17", end_date: "2020, 12, 18", user: j, pet: terry)
-
 
 
