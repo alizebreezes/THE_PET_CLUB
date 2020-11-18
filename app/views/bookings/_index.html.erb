@@ -1,0 +1,19 @@
+
+<div class="container">
+
+  <div class="text-center">
+    <h1>All your bookings</h1>
+  </div>
+    <div class="card mt-5 mb-5" >
+      <ul class="list-group list-group-flush">
+      <% @bookings.each do |b| %>
+          <% if b.user === current_user %>
+              <li class="list-group-item"> <p><%= b.pet.name %> the <%= b.pet.species %> is booked between <strong><%= b.start_date %> </strong> and <strong><%= b.end_date %></strong></p> | <%= link_to 'edit' %> <%= link_to 'delete'%></li>
+          <% end %>
+      <% end %>
+  </ul>
+  </div>
+</div>
+
+
+
