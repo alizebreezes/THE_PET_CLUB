@@ -10,6 +10,7 @@ class PetsController < ApplicationController
         lng: pet.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { pet: pet }),
       }
+    end
 
     if params[:species].present?
       @pets = @pets.where(species: params[:species])
@@ -17,7 +18,6 @@ class PetsController < ApplicationController
     if params[:age].present?
       # raise
       @pets = @pets.where("age <= ?", params[:age])
-
     end
   end
 
