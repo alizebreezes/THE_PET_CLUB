@@ -1,11 +1,19 @@
 <div class="banner-index" style="background-image: url('<%= image_path 'dog-running.jpg' %>');">
   <div class="banner-content">
-    <h1>Walk me</h1>
+    <h1>Find your match</h1>
     <p>Take us out for a walk if you miss having an animal of your own or find someone to walk your pet.</p>
     <%= link_to "Add a pet", new_pet_path, class: "btn btn-flat btn-lg" %>
   </div>
 </div>
 <div class="container">
+
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+
   <div class="cards">
     <% @pets.each do |pet| %>
         <div class="card-trip">
@@ -14,6 +22,7 @@
               <h2><%= pet.name %></h2>
               <p><%= pet.species %></p>
               <p><%= pet.description %></p>
+              <p><%= pet.location %></p>
               <%= cl_image_tag pet.photo.key %>
 
             </div>

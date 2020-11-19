@@ -1,6 +1,15 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
+
+     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @pets.geocoded.map do |pet|
+      {
+        lat: pet.latitude,
+        lng: pet.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { pet: pet }),
+      }
+    end
   end
 
   def show
@@ -26,6 +35,6 @@ class PetsController < ApplicationController
   private
 
    def pet_params
-    params.require(:pet).permit(:name, :species, :age, :description, :photo)
+    params.require(:pet).permit(:name, :species, :age, :description, :location, :photo)
   end
 end
