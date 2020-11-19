@@ -4,7 +4,7 @@
   <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-primary' %>
   <br>
   <br>
-  <div> <%= cl_image_tag @pet.photo.key, crop: :fill %> </div>
+  <div> <%= cl_image_tag @pet.photo.key, crop: :fill if @pet.photo.attached? %> </div>
 
   <div class="card-product">
   <img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
