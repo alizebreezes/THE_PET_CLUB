@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="text-center">
+    <h1>Edit your profile</h1>
+  </div>
+
+  <div>
+    <%= simple_form_for(@user) do |f| %>
+      <%= f.input :name, html5: true %>
+      <%= f.input :location, html5: true %>
+      <%= f.input :bio, html5: true %>
+      <%= f.button :submit, "Update your profile", class: "btn-flat" %>
+    <% end %>
+  </div>
+</div>

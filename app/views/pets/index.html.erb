@@ -15,6 +15,18 @@
 
 
   <div class="cards">
+    <%= form_tag pets_path, method: :get do %>
+    <%= select_tag :species, options_for_select([ "all", "cat", "dog", "turtle", "rabit", "hamster", "mouse", "bird", "fish", "other"]) %>
+    <div id="range-field-value">
+
+    </div>
+    <%= range_field_tag(:age, value = 100, options = {class: "pet-range-input", min: 0, max: 100}) %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+  </div>
+
+
+  <div class="cards">
     <% @pets.each do |pet| %>
         <div class="card-trip">
           <div class="card-trip-infos">
