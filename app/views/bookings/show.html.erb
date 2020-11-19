@@ -12,8 +12,10 @@
   </div>
   <br>
   <br>
-  <%= link_to 'Back to Pets', pets_path, class: 'btn btn-primary' %>
+  <div class="d-line">
+    <%= link_to 'Confirm', user_path(current_user), class: 'btn btn-primary' %>
+    <%= link_to 'Back', :back, class: 'btn btn-primary' %>
+  </div>
   <br>
   <br>
-  <%= render 'index' %>
 </div>

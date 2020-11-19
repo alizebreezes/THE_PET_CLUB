@@ -67,13 +67,23 @@
 <div class="container">
 
   <div class="text-center">
-    <h1>All your bookings</h1>
+    <% if @user === current_user %>
+  <h3>All your bookings</h3>
+  <% end %>
   </div>
     <div class="card mt-5 mb-5" >
       <ul class="list-group list-group-flush">
       <% @bookings.each do |b| %>
           <% if b.user === current_user %>
-              <li class="list-group-item"> <p><%= b.pet.name %> the <%= b.pet.species %> is booked between <strong><%= b.start_date %> </strong> and <strong><%= b.end_date %></strong></p> | <%= link_to 'edit' %> <%= link_to 'delete'%></li>
+              <li class="list-group-item"> <p><%= b.pet.name %> the <%= b.pet.species %> is booked between <strong><%= b.start_date %> </strong> and <strong><%= b.end_date %></strong></p>
+               <% if @user === current_user %>
+               <%= link_to 'edit', edit_pet_booking_path(pet_id: b.pet, id: b)%>
+               <%= link_to 'delete',
+                pet_booking_path(pet_id: b.pet, id: b),
+                method: :delete,
+                data: {confirm: "Are you sure?"}
+               %>
+               <% end %>
           <% end %>
       <% end %>
   </ul>

@@ -27,9 +27,38 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+     @booking = Booking.find(params[:id])
+     @pet = Pet.find(params[:pet_id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
+    @booking.user = current_user
+    @booking.pet = @pet
+    @booking.update(booking_params)
+
+    if @booking.save!
+      redirect_to pet_booking_path(pet_id: @pet, id: @booking)
+    else
+      render "edit"
+    end
+  end
+
+  def destroy
+  @booking = Booking.find(params[:id])
+  @pet = Pet.find(params[:pet_id])
+  @booking.pet = @pet
+  @booking.destroy
+
+  redirect_to user_path(@booking)
+
+  end
+
   private
 
     def booking_params
-      params.require(:booking).permit(:start_date, :end_date, :pet_id, :user_id, :time)
+      params.require(:booking).permit(:start_date, :end_date, :pet_id, :user_id)
     end
 end
