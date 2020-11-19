@@ -27,44 +27,44 @@ bruno = User.create!(name: "bruno", location: "lisbon", bio: "Lorem ipsum dolor 
 
 
 file = File.open("app/assets/images/terry.jpg")
-terry = Pet.new(name: "Terry", species: "dog", age: 15, description: "Terry loves apples and bringing sticks of any size home.", user: antje)
+terry = Pet.new(name: "Terry", species: "dog", age: 15, description: "Terry loves apples and bringing sticks of any size home.", location: "Essen", user: antje)
 terry.photo.attach(io: file, filename: 'terry.jpg', content_type: 'image/jpg')
 terry.save!
 
 file = File.open("app/assets/images/cat.jpg")
-zorro = Pet.new(name: "Zorro", species: "cat", age: 5, description: "meows", user: j)
+zorro = Pet.new(name: "Zorro", species: "cat", age: 5, description: "meows", location: "copenhagen", user: j)
 zorro.photo.attach(io: file, filename: 'cat.jpg', content_type: 'image/jpg')
 zorro.save!
 
 
 file = File.open("app/assets/images/dogs.jpg")
-jessy = Pet.new(name: "Jessy", species: "dog", age: 15, description: "Sweet dog. Doesn't like German shepherd dogs.", user: martin)
+jessy = Pet.new(name: "Jessy", species: "dog", age: 15, description: "Sweet dog. Doesn't like German shepherd dogs.",location: "Stockholm", user: martin)
 jessy.photo.attach(io: file, filename: 'dogs.jpg', content_type: 'image/jpg')
 jessy.save!
 
 file = File.open("app/assets/images/cat2.jpg")
-brutus = Pet.new(name: "Brutus", species: "cat", age: 5, description: "Be careful. He doesn't look like it but he eats humans.", user: martin)
+brutus = Pet.new(name: "Brutus", species: "cat", age: 5, description: "Be careful. He doesn't look like it but he eats humans.",location: "Stockholm", user: martin)
 brutus.photo.attach(io: file, filename: 'cat2.jpg', content_type: 'image/jpg')
 brutus.save!
 
 file = File.open("app/assets/images/lazy-dog.jpg")
-khan = Pet.new(name: "Khan", species: "dog", age: 15, description: "Lazy dog. Only needs a short round once a day.", user: alize)
+khan = Pet.new(name: "Khan", species: "dog", age: 15, description: "Lazy dog. Only needs a short round once a day.",location: "Stockholm", user: alize)
 khan.photo.attach(io: file, filename: 'lazy-dog.jpg', content_type: 'image/jpg')
 khan.save!
 
 
 file = File.open("app/assets/images/cats.jpg")
-doro = Pet.new(name: "Doro", species: "cat", age: 5, description: "Very shy cat. Don't take it personally if she only shows up for food once you left. She's like that.", user: j)
+doro = Pet.new(name: "Doro", species: "cat", age: 5, description: "Very shy cat. Don't take it personally if she only shows up for food once you left. She's like that.", location: "copenhagen", user: j)
 doro.photo.attach(io: file, filename: 'cats.jpg', content_type: 'image/jpg')
 doro.save!
 
 file = File.open("app/assets/images/dogs2.jpg")
-hasso = Pet.new(name: "Hasso", species: "dog", age: 15, description: "Loves kids. No danger to anyone.", user: antje)
+hasso = Pet.new(name: "Hasso", species: "dog", age: 15, description: "Loves kids. No danger to anyone.", location: "Essen", user: antje)
 hasso.photo.attach(io: file, filename: 'dogs2.jpg', content_type: 'image/jpg')
 hasso.save!
 
 file = File.open("app/assets/images/cat3.jpg")
-kitty = Pet.new(name: "Kitty", species: "cat", age: 5, description: "Loves human company. Would be great if you have some time at hand to spend with her in our absence.", user: j)
+kitty = Pet.new(name: "Kitty", species: "cat", age: 5, description: "Loves human company. Would be great if you have some time at hand to spend with her in our absence.", location: "copenhagen", user: j)
 kitty.photo.attach(io: file, filename: 'cat3.jpg', content_type: 'image/jpg')
 kitty.save!
 
