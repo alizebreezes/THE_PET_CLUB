@@ -1,10 +1,11 @@
-<div class="banner-index" style="background-image: url('<%= image_path 'dog-running.jpg' %>');">
-  <div class="banner-content">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://source.unsplash.com/qO-PIF84Vxg/100%);">
+  <div class="container">
     <h1>Walk me</h1>
     <p>Take us out for a walk if you miss having an animal of your own or find someone to walk your pet.</p>
     <%= link_to "Add a pet", new_pet_path, class: "btn btn-flat btn-lg" %>
   </div>
 </div>
+
 <div class="container">
   <div class="cards">
     <% @pets.each do |pet| %>
@@ -22,6 +23,9 @@
     <% end %>
   </div>
 </div>
+
+
+
 
 
 <!--

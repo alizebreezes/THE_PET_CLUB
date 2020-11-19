@@ -1,5 +1,3 @@
-
-
 masthead {
   padding-bottom: 6rem;
 }
@@ -7,10 +5,26 @@ masthead {
   font-size: 2.75rem;
   line-height: 2.75rem;
   color: orange;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
 }
+
+
+.masthead .masthead-heading:hover {
+  color: orange;
+  opacity: 1;
+}
+
+
 .masthead .masthead-subheading {
   font-size: 1.25rem;
   color: orange;
+}
+
+.masthead-avatar .mb-5 {
+  width: 100px;
+  border-radius: 50%;
 }
 
 
@@ -21,6 +35,12 @@ masthead {
   .masthead .masthead-heading {
     font-size: 4rem;
     line-height: 3.5rem;
+    opacity: 0.8;
+  }
+  .masthead .masthead-heading:hover {
+    color: orange;
+    text-decoration: none;
+    opacity: 1;
   }
   .masthead .masthead-subheading {
     font-size: 1.5rem;
