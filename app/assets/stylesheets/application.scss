@@ -11,19 +11,19 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
+@import "pets/show";
 
 h1 {
   font-size: 56px;
-  margin-top: 1em;
-  padding-top: 1em;
+  margin: 1em auto;
 }
 
 h2 {
   font-size: 45px;
   display: block;
-  padding-top: 50px;
-  padding-bottom: 10px;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  color: $dark-grey;
 }
 
 h3 {
@@ -43,6 +43,7 @@ body {
     line-height: 1.5;
     font-size: 18px;
     letter-spacing: .03em;
+    color: $black;
     // padding: 4em 1em;
     // max-width: 50em;
 }
@@ -51,3 +52,5 @@ body {
     flex: 1;    /* same as flex-grow: 1; */
     margin: 32px auto;
 }
+
+

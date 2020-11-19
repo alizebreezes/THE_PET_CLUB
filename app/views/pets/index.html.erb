@@ -1,8 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://source.unsplash.com/qO-PIF84Vxg/100%);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://source.unsplash.com/qO-PIF84Vxg/100%);">
   <div class="container">
     <h1>Walk me</h1>
     <p>Take us out for a walk if you miss having an animal of your own or find someone to walk your pet.</p>
-    <%= link_to "Add a pet", new_pet_path, class: "btn btn-flat btn-lg" %>
+    <%= link_to "Post a pet", new_pet_path, class: "btn btn-flat btn-lg" %>
   </div>
 </div>
 
@@ -12,9 +12,9 @@
         <div class="card-trip">
           <div class="card-trip-infos">
             <div>
-              <h2><%= pet.name %></h2>
-              <p><%= pet.species %></p>
-              <p><%= pet.description %></p>
+              <h3><%= pet.name %></h3>
+              <p>I am a <%= pet.species %>!</p>
+              <p>"<%= pet.description.first(30) %>..."</p>
               <%= cl_image_tag pet.photo.key if pet.photo.attached? %>
             </div>
           </div>
