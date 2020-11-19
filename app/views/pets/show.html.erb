@@ -1,6 +1,7 @@
 <div class="container">
-  <h2>Hello, I am <em><%= @pet.name.upcase %></em></h2>
-  <p>Owner: <em><strong><%= @pet.user.name %></strong></em>, live in <em><strong><%= @pet.user.location %></strong></em></p>
+  <h2>Hello, I am <em> <%= @pet.name.upcase %> </em></h2>
+
+  <p>Owner: <em><strong><%= link_to @pet.user.name , user_path(@pet.user) %></strong></em>, live in <em><strong><%= @pet.user.location %></strong></em></p>
   <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-primary' %>
   <br>
   <br>
@@ -20,3 +21,4 @@
   <br>
 
 </div>
+
