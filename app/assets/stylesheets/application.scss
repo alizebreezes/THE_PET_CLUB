@@ -12,6 +12,28 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pets/index";
+
+h1 {
+  font-size: 56px;
+  margin: 1em auto;
+}
+
+h2 {
+  font-size: 45px;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  color: $dark-grey;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
 
 body {
     display: flex;
@@ -19,9 +41,17 @@ body {
     flex-direction: column;
     margin: 0px auto;
     background-color: white;
+    line-height: 1.5;
+    font-size: 18px;
+    letter-spacing: .03em;
+    color: $dark-grey;
+    // padding: 4em 1em;
+    // max-width: 50em;
 }
 
 .container {
     flex: 1;    /* same as flex-grow: 1; */
-    margin: 24px auto
+    margin: 32px auto;
 }
+
+
