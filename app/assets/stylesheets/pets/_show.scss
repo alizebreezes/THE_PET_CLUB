@@ -1,5 +1,5 @@
 h2 {
-  color: $green;
+  color: $red;
 }
 
 .card-product {
@@ -9,6 +9,7 @@ h2 {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin-top: 16px;
 }
 
 .card-product img {
@@ -24,11 +25,8 @@ h2 {
 }
 
 .card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  font-size: 16px;
+  margin: 8px 0px;
 }
 
 .card-product .card-product-infos {

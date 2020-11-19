@@ -11,7 +11,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pets/show";
+@import "pets/index";
 
 h1 {
   font-size: 56px;
@@ -43,7 +43,7 @@ body {
     line-height: 1.5;
     font-size: 18px;
     letter-spacing: .03em;
-    color: $black;
+    color: $dark-grey;
     // padding: 4em 1em;
     // max-width: 50em;
 }

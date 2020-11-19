@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Hello, I am <em><%= @pet.name.upcase %></em></h2>
-  <p>Owner: <em><strong><%= @pet.user.name %></strong></em>, live in <em><strong><%= @pet.user.location %></strong></em></p>
-  <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-primary' %>
+  <p><em>species:</em> <%= @pet.species %>, <em>Age:</em> <%= @pet.age %></p>
+  <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-flat' %>
   <br>
   <br>
   <div> <%= cl_image_tag @pet.photo.key, crop: :fill if @pet.photo.attached? %> </div>
@@ -9,13 +9,13 @@
   <div class="card-product">
   <img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
   <div class="card-product-infos">
+    <p>Owner: <em><strong><%= @pet.user.name %></strong></em>, live in <em><strong><%= @pet.user.location %></strong></em></p>
     <i class="fas fa-quote-left"></i> <%= @pet.description %>
-      <p><em>species:</em> <%= @pet.species %>, <em>Age:</em> <%= @pet.age %></p>
-    </div>
+  </div>
   </div>
   <br>
   <br>
-  <%= link_to 'Back to the list', pets_path(@pet), class: 'btn btn-primary' %>
+  <%= link_to 'Back to the list', pets_path(@pet), class: 'btn btn-flat' %>
   <br>
   <br>
 
