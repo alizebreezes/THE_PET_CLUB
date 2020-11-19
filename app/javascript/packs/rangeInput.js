@@ -4,7 +4,7 @@ const rangeValue = document.querySelector("#range-field-value");
 const updateRange = (e) => {
   const value = e.target.value;
   console.log(value);
-  rangeValue.innerText = `age is ${value}`;
+  rangeValue.innerText = `pets up to ${value} years old`;
 }
 
 

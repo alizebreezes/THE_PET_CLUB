@@ -1,12 +1,12 @@
 class PetsController < ApplicationController
   def index
-    # raise
     @pets = Pet.all
     if params[:species].present?
       @pets = @pets.where(species: params[:species])
     end
     if params[:age].present?
-      @pets = @pets.where(age: params[:age])
+      # raise
+      @pets = @pets.where("age <= ?", params[:age])
     end
   end
 
