@@ -1,0 +1,83 @@
+<div >
+    <div >
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-12 col-md-12 pl-0 pr-0">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25"> <img src="https://via.placeholder.com/100" class="img-radius" alt="User-Profile-Image"> </div>
+                                <h2 class="f-w-600"><%=@user.name %></h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">From</p>
+                                        <h6 class="text-muted f-w-400"><%=@user.location %></h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Email</p>
+                                        <h6 class="text-muted f-w-400"><%=@user.email %></h6>
+                                    </div>
+                                </div>
+                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Bio</h6>
+                                <div class="row">
+                                    <div class="col-sm-6 col-xl-10">
+                                      <h6 class="text-muted f-w-400"><%=@user.bio %></h6>
+                                    </div>
+                                    <div>
+                                      <% if @user === current_user %>
+                                     <p><%= link_to "Edit profile", edit_user_path(@user)%></p>
+                                      <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container justify-content-center">
+  <h2 class="text-center"><%= @user.name %>'s pets</h2>
+  <div class="cards justify-content-center mt-3">
+    <% @pets.each do |pet| %>
+        <div class="card-trip">
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= pet.name %></h2>
+              <p><%= pet.species %></p>
+              <p><%= pet.description %></p>
+              <%= cl_image_tag pet.photo.key %>
+
+            </div>
+          </div>
+            <%= link_to "", pet_path(pet), class: 'card-link' %>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <div class="text-center">
+    <h1>All your bookings</h1>
+  </div>
+    <div class="card mt-5 mb-5" >
+      <ul class="list-group list-group-flush">
+      <% @bookings.each do |b| %>
+          <% if b.user === current_user %>
+              <li class="list-group-item"> <p><%= b.pet.name %> the <%= b.pet.species %> is booked between <strong><%= b.start_date %> </strong> and <strong><%= b.end_date %></strong></p> | <%= link_to 'edit' %> <%= link_to 'delete'%></li>
+          <% end %>
+      <% end %>
+  </ul>
+  </div>
+</div>
+
+
