@@ -32,11 +32,13 @@
         <div class="card-trip">
           <div class="card-trip-infos">
             <div>
-              <h3><%= pet.name %></h3>
-              <p>I am a <%= pet.species %>!</p>
-              <p>"<%= pet.description.first(30) %>..."</p>
-              <p><%= pet.location %></p>
-               <%= cl_image_tag pet.photo.key %>
+              <div>
+                <h3><%= pet.name %></h3>
+                <p>I am a <%= pet.species %>!</p>
+                <p>"<%= pet.description.first(30) %>..."</p>
+                <p><%= pet.location %></p>
+              </div >
+               <%= cl_image_tag pet.photo.key, height: 200, width: 350, crop: :fill %>
             </div>
           </div>
             <%= link_to "", pet_path(pet), class: 'card-link' %>
