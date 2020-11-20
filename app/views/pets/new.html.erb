@@ -11,6 +11,7 @@
           <%= f.input :name %>
           <%= f.input :species, collection: ["cat", "dog", "turtle", "rabit", "hamster", "mouse", "bird", "fish", "other"] %>
           <%= f.input :age%>
+          <%= f.input :location%>
           <%= f.input :description %>
           <%= f.input :photo, as: :file %>
           <%=f.button :submit, "Post!", class: "btn-post"%>

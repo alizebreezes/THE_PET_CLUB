@@ -16,7 +16,6 @@ class PetsController < ApplicationController
       @pets = @pets.where(species: params[:species])
     end
     if params[:age].present?
-      # raise
       @pets = @pets.where("age <= ?", params[:age])
     end
   end
@@ -30,20 +29,19 @@ class PetsController < ApplicationController
   end
 
   def create
-  @pet = Pet.new(pet_params)
-  @pet.user = current_user
-
+    @pet = Pet.new(pet_params)
+    @pet.user = current_user
     if @pet.save
-    redirect_to pets_path
-  else
-    render :new
-  end
-
+      redirect_to pets_path
+    else
+      render :new
+    end
   end
 
   private
 
-   def pet_params
+  def pet_params
     params.require(:pet).permit(:name, :species, :age, :description, :location, :photo)
   end
 end
+
