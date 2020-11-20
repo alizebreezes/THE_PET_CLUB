@@ -17,7 +17,7 @@
 
   <div class="cards mt-3">
     <%= form_tag pets_path, method: :get do %>
-    <%= select_tag :species, options_for_select([ "all", "cat", "dog", "turtle", "rabit", "hamster", "mouse", "bird", "fish", "other"]) %>
+    <%= select_tag :species, options_for_select([ "all", "cat", "dog", "turtle", "rabbit", "hamster", "mouse", "bird", "fish", "other"]) %>
     <div id="range-field-value">
       pets up to 100 years old
     </div>

@@ -23,6 +23,14 @@
       <br>
       <br>
       <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-confirm' %>
+
+  <div class="card-product">
+  <%= cl_image_tag @pet.user.photo.key, class: "avatar-square" %>
+  <div class="card-product-infos">
+
+    <p><i class="fas fa-quote-left"></i> <%= @pet.description %></p>
+  </div>
+
   </div>
 
   <h6 class="text-muted text-right"><%= @pet.species %>, <%= @pet.age %> year(s) old</h6>

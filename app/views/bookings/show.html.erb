@@ -7,7 +7,7 @@
   <div class="card-product">
   <div class="card-product-infos">
       <p><strong>Time: </strong>from <em><%= @booking.start_date.strftime("%H:%M") %></em> to <em><%= @booking.end_date.strftime("%H:%M") %></em></p>
-      <p>Owner info: <em><%= link_to @booking.user.name, '#' %></em></p>
+      <p>Booked by: <em><%= link_to @booking.user.name, '#' %></em></p>
   </div>
   </div>
   <br>

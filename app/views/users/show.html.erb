@@ -10,7 +10,7 @@
                 <div class="row m-l-0 m-r-0">
                     <div class="col-sm-4 bg-c-lite-green user-profile">
                         <div class="card-block text-center text-white">
-                            <div class="m-b-25"> <img src="https://via.placeholder.com/100" class="img-radius" alt="User-Profile-Image"> </div>
+                            <div class="m-b-25"><%= cl_image_tag @user.photo.key, height: 120, width: 120, crop: :fill, class:"rounded-circle" %></div>
                             <h2 class="f-w-600"><%=@user.name %></h2>
 
                         </div>
@@ -61,7 +61,9 @@
               <h2><%= pet.name %></h2>
               <p><%= pet.species %></p>
               <p><%= pet.description %></p>
-              <%= cl_image_tag pet.photo.key %>
+              <%= link_to pet_path(pet) do %>
+                <%= cl_image_tag pet.photo.key %>
+                <% end %>
             </div>
           </div>
             <%= link_to "", pet_path(pet), class: 'card-link' %>
@@ -88,7 +90,7 @@
                 <div class="col-sm-4">
                 <%= link_to 'edit', edit_pet_booking_path(pet_id: b.pet, id: b), class: 'btn' %>
                 <%= link_to 'delete',
-                pet_booking_path(pet_id: b.pet, id: b),
+                booking_path(b),
                 method: :delete,
                 data: {confirm: "Are you sure?"}, class: 'btn'
                %>
