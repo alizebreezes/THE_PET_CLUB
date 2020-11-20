@@ -13,7 +13,7 @@
   <div> <%= cl_image_tag @pet.photo.key, crop: :fill if @pet.photo.attached? %> </div>
 
   <div class="card-product">
-  <img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
+  <%= cl_image_tag @pet.user.photo.key, class: "avatar-square" %>
   <div class="card-product-infos">
     <p>Owner: <em><strong><%= @pet.user.name %></strong></em>, lives in <em><strong><%= @pet.user.location %></strong></em></p>
     <i class="fas fa-quote-left"></i> <%= @pet.description %>
