@@ -12,7 +12,7 @@ class PetsController < ApplicationController
       }
     end
 
-    if params[:species].present?
+    if params[:species].present? && params[:species] != "all"
       @pets = @pets.where(species: params[:species])
     end
     if params[:age].present?

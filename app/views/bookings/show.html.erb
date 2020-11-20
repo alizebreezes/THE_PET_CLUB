@@ -2,7 +2,7 @@
   <h1>Booking details</h1>
   <br>
   <br>
-  <h3>Your booking with <em><%= @booking.pet.name.upcase %></em></h3>
+  <h3>Your booking with <strong><%= @booking.pet.name.upcase %></strong></h3>
   <br>
   <div class="card-product">
   <div class="card-product-infos">
@@ -13,8 +13,8 @@
   <br>
   <br>
   <div class="d-line">
-    <%= link_to 'Confirm', user_path(current_user), class: 'btn btn-primary' %>
-    <%= link_to 'Back', :back, class: 'btn btn-primary' %>
+    <%= link_to 'Confirm', user_path(current_user), class: 'btn-confirm' %>
+    <%= link_to 'Back', :back, class: 'btn' %>
   </div>
   <br>
   <br>
