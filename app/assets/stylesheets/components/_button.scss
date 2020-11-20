@@ -36,8 +36,22 @@
   opacity: 1;
 }
 
+.submit_tag .btn-confirm {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $pink;
+  opacity: 0.8;
+}
+.input .btn-confirm:hover {
+  background: $pink;
+  opacity: 1;
+  color: white;
+}
+
 .btn-confirm {
   color: white;
+  margin: 16px 0px;
   padding: 8px 24px;
   border-radius: 4px;
   background: $pink;

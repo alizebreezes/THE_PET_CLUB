@@ -1,29 +1,36 @@
-<div class="banner banner-pet-show">
-  <div class="container">
-    <h2>Hello, I am <strong><%= @pet.name.upcase %></strong></h2>
-    <p><em>species:</em> <%= @pet.species %>, <em>Age:</em> <%= @pet.age %></p>
-    <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-confirm' %>
-  </div>
-</div>
-
-
 <div class="container">
-  <br>
-  <br>
-  <div> <%= cl_image_tag @pet.photo.key, crop: :fill if @pet.photo.attached? %> </div>
+  <h1 class="text-center">About <%= @pet.name.upcase %> <i class="fas fa-heart"></i></h1>
 
-  <div class="card-product">
-  <img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
-  <div class="card-product-infos">
-    <p>Owner: <em><strong><%= @pet.user.name %></strong></em>, lives in <em><strong><%= @pet.user.location %></strong></em></p>
-    <i class="fas fa-quote-left"></i> <%= @pet.description %>
+  <div class="card-block">
+      <h3 class="m-b-20 p-b-5 b-b-default f-w-600">Contact Info</h3>
+      <div class="row">
+          <div class="col-sm-6">
+              <h6 class="m-b-10 f-w-600">Owner</h6>
+              <h6 class="text-muted f-w-400"><%= @pet.user.name %><%= @pet.species %></h6>
+          </div>
+          <div class="col-sm-6">
+              <h6 class="m-b-10 f-w-600">Loction</h6>
+              <h6 class="text-muted f-w-400"><%= @pet.user.location %></h6>
+          </div>
+      </div>
+      <h3 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Note from <%= @pet.user.name %></h3>
+      <div class="row">
+          <div class="col-sm-12 col-xl-12">
+            <h6 class="text-muted f-w-400">
+              <i class="fas fa-quote-left"></i> <%= @pet.description %></h6>
+          </div>
+      </div>
+      <br>
+      <br>
+      <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-confirm' %>
   </div>
-  </div>
+
+  <h6 class="text-muted text-right"><%= @pet.species %>, <%= @pet.age %> year(s) old</h6>
+  <div> <%= cl_image_tag @pet.photo.key, crop: :fill if @pet.photo.attached? %> </div>
   <br>
   <br>
   <%= link_to 'Back to the list', pets_path(@pet), class: 'btn' %>
   <br>
   <br>
-
 </div>
 

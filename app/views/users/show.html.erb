@@ -1,7 +1,5 @@
-<div class="banner">
-  <div class="container user-header">
-    <h1 class="">My Page <i class="fas fa-heart"></i></h1>
-  </div>
+<div class="container text-center">
+  <h1 class="">My Page <i class="fas fa-heart"></i></h1>
 </div>
 
 <div class="container" >
@@ -40,7 +38,7 @@
                             <div class="row">
                               <div class="col-sm-12 col-xl-12 user-profile-btn">
                                 <% if @user === current_user %>
-                                  <h6><%= link_to "Edit my profile", edit_user_path(@user), class:"btn-confirm" %></h6>
+                                  <%= link_to "Edit my profile", edit_user_path(@user), class:"btn" %>
                                 <% end %>
                               </div>
                             </div>
@@ -54,22 +52,22 @@
 
 <div class="container">
     <h3 class="m-b-20 p-b-5 b-b-default f-w-600 user-header"><%= @user.name.capitalize %>'s pets</h3>
-  <div class="justify-content-center">
+    <div class="justify-content-center">
     <div class="cards justify-content-center mt-3">
       <% @pets.each do |pet| %>
-          <div class="card-trip">
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= pet.name %></h2>
-                <p><%= pet.species %></p>
-                <p><%= pet.description %></p>
-                <%= cl_image_tag pet.photo.key %>
-
-              </div>
+        <div class="card-trip">
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= pet.name %></h2>
+              <p><%= pet.species %></p>
+              <p><%= pet.description %></p>
+              <%= cl_image_tag pet.photo.key %>
             </div>
-              <%= link_to "", pet_path(pet), class: 'card-link' %>
           </div>
+            <%= link_to "", pet_path(pet), class: 'card-link' %>
+        </div>
       <% end %>
+    </div>
     </div>
 </div>
 
@@ -80,22 +78,23 @@
     <ul class="list-group list-group-flush">
     <% @bookings.each do |b| %>
         <% if b.user === current_user %>
-        </div>
             <li class="list-group-item">
+              <div class="row">
               <div class="col-sm-8">
                 <i class="m-b-10 f-w-600 fas fa-paw"> <%= b.pet.name %> </i> the <%= b.pet.species %>
+                <p class="text-muted f-w-400"><%= b.start_date %> ~ <%= b.end_date %></p>
               </div>
-              <div class="col-sm-4">
                 <% if @user === current_user %>
+                <div class="col-sm-4">
                 <%= link_to 'edit', edit_pet_booking_path(pet_id: b.pet, id: b), class: 'btn' %>
                 <%= link_to 'delete',
                 pet_booking_path(pet_id: b.pet, id: b),
                 method: :delete,
                 data: {confirm: "Are you sure?"}, class: 'btn'
                %>
+                </div>
                <% end %>
-              </div>
-              <p><%= b.start_date %> ~ <%= b.end_date %></p>
+            </div>
             </li>
         <% end %>
     <% end %>
