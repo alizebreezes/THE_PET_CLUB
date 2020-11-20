@@ -1,10 +1,5 @@
-h1 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 16px;
-  font-weight: bold;
+h2 {
+  color: $red;
 }
 
 .card-product {
@@ -14,6 +9,7 @@ h3 {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin-top: 16px;
 }
 
 .card-product img {
@@ -23,17 +19,14 @@ h3 {
 }
 
 .card-product h2 {
-  font-size: 16px;
+  // font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  font-size: 16px;
+  margin: 8px 0px;
 }
 
 .card-product .card-product-infos {

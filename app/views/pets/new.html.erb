@@ -1,9 +1,11 @@
-<div class="container">
-
-  <div class="text-center">
-    <h1>Add your Pet</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/YCPkW_r_6uA/100%);">
+  <div class="container">
+    <h2>Add a new friend!</h2>
+    <p>We are exciting to meet a new friend <i class="fas fa-heart"></i></p>
   </div>
+</div>
 
+<div class="container">
   <div>
     <%= simple_form_for @pet do |f| %>
           <%= f.input :name %>
@@ -11,8 +13,8 @@
           <%= f.input :age%>
           <%= f.input :location%>
           <%= f.input :description %>
-          <%=f.button :submit, "Post my pet", class: "btn-flat"%>
           <%= f.input :photo, as: :file %>
+          <%=f.button :submit, "Post!", class: "btn-flat"%>
     <% end %>
   </div>
 </div>

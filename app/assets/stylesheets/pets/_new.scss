@@ -1,0 +1,14 @@
+.btn-orange {
+  color: $light-gray;
+  background: $green;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.btn-orange:hover {
+  color: $light-gray;
+  opacity: 1;
+}
