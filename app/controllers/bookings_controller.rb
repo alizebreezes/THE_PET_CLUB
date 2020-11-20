@@ -47,12 +47,11 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+
   @booking = Booking.find(params[:id])
-  @pet = Pet.find(params[:pet_id])
-  @booking.pet = @pet
   @booking.destroy
 
-  redirect_to user_path(@booking)
+  redirect_to user_path(@booking.user)
 
   end
 
