@@ -6,7 +6,11 @@
                     <div class="row m-l-0 m-r-0">
                         <div class="col-sm-4 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
-                                <div class="m-b-25"> <img src="https://via.placeholder.com/100" class="img-radius" alt="User-Profile-Image"> </div>
+                                <div class="m-b-25">
+                                  <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop: :fill, :class => "rounded-circle " if @user.photo.attached?  %>
+
+
+                                 </div>
                                 <h2 class="f-w-600"><%=@user.name %></h2>
                             </div>
                         </div>
