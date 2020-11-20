@@ -15,7 +15,8 @@
   <div class="card-product">
   <img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
   <div class="card-product-infos">
-    <p>Owner: <em><strong><%= @pet.user.name %></strong></em>, lives in <em><strong><%= @pet.user.location %></strong></em></p>
+
+    <p>Owner: <em><strong><%= link_to @pet.user.name, user_path(@pet.user)  %></strong></em>, lives in <em><strong><%= @pet.user.location %></strong></em></p>
     <i class="fas fa-quote-left"></i> <%= @pet.description %>
   </div>
   </div>
