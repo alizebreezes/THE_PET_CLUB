@@ -1,5 +1,11 @@
-h2 {
-  color: $red;
+.banner-pet-show {
+  background-color: $baby;
+  padding: 16px 0px;
+  background-size: cover;
+}
+
+.banner-pet-show h2 {
+  color: $gray;
 }
 
 .card-product {

@@ -1,7 +1,13 @@
+<div class="banner banner-pet-show">
+  <div class="container">
+    <h2>Hello, I am <strong><%= @pet.name.upcase %></strong></h2>
+    <p><em>species:</em> <%= @pet.species %>, <em>Age:</em> <%= @pet.age %></p>
+    <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-confirm' %>
+  </div>
+</div>
+
+
 <div class="container">
-  <h2>Hello, I am <strong><%= @pet.name.upcase %></strong></h2>
-  <p><em>species:</em> <%= @pet.species %>, <em>Age:</em> <%= @pet.age %></p>
-  <%= link_to 'Book a time with me!', new_pet_booking_path(@pet), class: 'btn btn-confirm' %>
   <br>
   <br>
   <div> <%= cl_image_tag @pet.photo.key, crop: :fill if @pet.photo.attached? %> </div>
