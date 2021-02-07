@@ -10,15 +10,11 @@ PETogether is a web-app designed to get people & pets meet each other. This is a
 
  [https://petclub486.herokuapp.com/](https://petclub486.herokuapp.com/)
 
-### User Journey
-
----
+## User Journey
 
 As a User, I would like to book a time with lovely animal this weekend. I miss my dog in Korea, and I almost kidnap my neighbor's dog yesterday. Before I become criminal in Sweden, I will find a friendly community where I can pet dogs. 
 
-### User Story
-
----
+## User Story
 
 - I found a pet community what looks very friendly with new commers
 - The website landing page shows lovely kitty represents its feeling
@@ -29,15 +25,11 @@ As a User, I would like to book a time with lovely animal this weekend. I miss m
 - I select a pet, and book a time with the pet
 - I can manage my booking list and details in my page
 
-### Tech Stack
-
----
+## Tech Stack
 
 Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 
-### **What we learned**
-
----
+## **What we learned**
 
 - How to use SASS
 — variables, better uses of helpers
@@ -53,9 +45,7 @@ Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 - Database testing and migration
 - Presentation
 
-### Personal Challenges as a Front end developing side
-
----
+## 🧗🏻‍♀️ Personal Challenges as a Front end developing side
 
 - CSS / SASS file structure and apply methods
 - Bootstrap properties modification
@@ -64,9 +54,8 @@ Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 — Deciding correct collor matches and pallete
 - Page unification, consistence design
 
-### Team
+## ✨ Meet Our Team ✨
 
----
 👩‍💻👩🏻‍🎨 Front-end & Design Heroins
 - [Alize Lee](https://github.com/alizebreezes)
 - [Antje Heierman](https://github.com/Planquadrat477)
@@ -75,8 +64,4 @@ Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 - [Jedrzej Lagodzinski](https://github.com/JensRay)
 - [Martin Nordlund](https://github.com/Marremurten)
 
-### In Closing
-
----
-
-Thanks for reading all this content. This was our first complete web-app and for me, first front end side project what I had to take all disgin scope of the tasks. As it was very hard, it was also very fun to learn the new scope of the process :)
+## In Closing Thanks for reading all this content. This was our first complete web-app and for me, first front end side project what I had to take all disgin scope of the tasks. As it was very hard, it was also very fun to learn the new scope of the process :)
