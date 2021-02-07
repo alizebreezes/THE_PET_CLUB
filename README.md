@@ -67,6 +67,15 @@ Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 — Deciding correct collor matches and pallete
 - Page unification, consistence design
 
+### Team
+
+---
+
+[Alize Lee](https://github.com/alizebreezes)
+[Antje Heierman](https://github.com/Planquadrat477)
+[Jedrzej Lagodzinski](https://github.com/JensRay)
+[Martin Nordlund](https://github.com/Marremurten)
+
 ### In Closing
 
 ---
