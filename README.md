@@ -1,14 +1,12 @@
 # PETogether 🐾
 
-### ABOUT
+## ABOUT
 
 
 PETogether is a web-app designed to get people & pets meet each other. This is a friendly community where you can find an animal friend to pet when you miss your pets in homeland. Also if you have to go somewhere for few days and no one to take care of your pets, you can find someone friendly who's missing their pets. 
 
 
-### Heroku Deployed Version
-
----
+## Heroku Deployed Version
 
  [https://petclub486.herokuapp.com/](https://petclub486.herokuapp.com/)
 
