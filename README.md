@@ -71,14 +71,12 @@ Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 
 ---
 👩‍💻👩🏻‍🎨 Front-end & Design Heroins
-[Alize Lee](https://github.com/alizebreezes)
-
-[Antje Heierman](https://github.com/Planquadrat477)
+- [Alize Lee](https://github.com/alizebreezes)
+- [Antje Heierman](https://github.com/Planquadrat477)
 
 🧑‍💻📈 Back-end Heroes
-[Jedrzej Lagodzinski](https://github.com/JensRay)
-
-[Martin Nordlund](https://github.com/Marremurten)
+- [Jedrzej Lagodzinski](https://github.com/JensRay)
+- [Martin Nordlund](https://github.com/Marremurten)
 
 ### In Closing
 
