@@ -64,4 +64,4 @@ Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 - [Jedrzej Lagodzinski](https://github.com/JensRay)
 - [Martin Nordlund](https://github.com/Marremurten)
 
-## In Closing Thanks for reading all this content. This was our first complete web-app and for me, first front end side project what I had to take all disgin scope of the tasks. As it was very hard, it was also very fun to learn the new scope of the process :)
+#### Thanks for reading all this content. This was our first complete web-app and for me, first front end side project what I had to take all disgin scope of the tasks. As it was very hard, it was also very fun to learn the new scope of the process :)
