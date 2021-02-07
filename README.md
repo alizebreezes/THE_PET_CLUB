@@ -1,10 +1,11 @@
 # PETogether 🐾
 
-## ABOUT
+### Little Point Out 🙈
+Our main color is yellow what makes us feel playful and active! Also I picked hot pink to get strong contrast with cute and lovely feeling. Please find some cute details like paw, heart or faces in our forms! <3
 
+## About
 
 PETogether is a web-app designed to get people & pets meet each other. This is a friendly community where you can find an animal friend to pet when you miss your pets in homeland. Also if you have to go somewhere for few days and no one to take care of your pets, you can find someone friendly who's missing their pets. 
-
 
 ## Heroku Deployed Version
 
