@@ -72,8 +72,11 @@ Ruby on Rails | Devise | Mapbox | PostgreSQL | CSS | SASS
 ---
 
 [Alize Lee](https://github.com/alizebreezes)
+
 [Antje Heierman](https://github.com/Planquadrat477)
+
 [Jedrzej Lagodzinski](https://github.com/JensRay)
+
 [Martin Nordlund](https://github.com/Marremurten)
 
 ### In Closing
