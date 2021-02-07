@@ -10,6 +10,13 @@ PETogether is a web-app designed to get people & pets meet each other. This is a
 ## Heroku Deployed Version
 
  [https://petclub486.herokuapp.com/](https://petclub486.herokuapp.com/)
+ 
+### 🚨 Super Important! --- How to use it?
+Since the app was developed as community, we set it to login. Please, use this test account to login
+#### ID: alize@alize.com
+#### PW: 123456
+
+Or, you can create any random account :) (No need to be real info)
 
 ## User Journey
 
